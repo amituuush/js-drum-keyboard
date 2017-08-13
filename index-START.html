@@ -73,7 +73,16 @@
         }else{
           audios[i].currentTime = 0
         }
-        // audios[i].play();
+      }
+    }
+
+    for (var i = 0; i < audios.length; i++) {
+      if (divs[i].dataset.key === event.keyCode.toString()) {
+        const div = divs[i];
+        div.classList.toggle('playing');
+          setTimeout(() => {
+            div.classList.toggle('playing');
+          }, 50);
       }
     }
   })
